@@ -11,6 +11,7 @@ import (
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
+	"go_web_cli/settings"
 	"net"
 	"net/http"
 	"net/http/httputil"
@@ -21,11 +22,11 @@ import (
 )
 
 // 初始化logger
-func Init() (err error) {
-	writeSyncer := getLogWriter(viper.GetString("log.filename"),
-		viper.GetInt("log.max_size"),
-		viper.GetInt("log.max_backups"),
-		viper.GetInt("log.max_age"))
+func Init(cfg *settings.LogConfig) (err error) {
+	writeSyncer := getLogWriter(cfg.FileName,
+		cfg.MaxSize,
+		cfg.MaxBackups,
+		cfg.MaxAge)
 	encoder := getEncoder()
 	// zapcore.DebugLevel 打印级别
 	var l = new(zapcore.Level)

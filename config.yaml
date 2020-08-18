@@ -1,6 +1,7 @@
 app:
   name: "web_app"
   mode: "dev"
+  version: "v1.0"
   port: 8081
 
 log:
@@ -12,12 +13,12 @@ log:
 
 mysql:
   host: "127.0.0.1"
-  port: 3308
+  port: 3306
   user: "root"
   password: "root"
   dbname: "sql_demo"
   max_conns: 200
-  max_idel_conns: 50
+  max_idle_conns: 50
 
 redis:
   host: "127.0.0.1"
