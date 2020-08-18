@@ -49,10 +49,10 @@ type RedisConfig struct {
 	Db       int    `mapstructure:"db"`
 }
 
-func Init() (err error) {
-	viper.SetConfigFile("./config.yaml") // 指定配置文件
+func Init(fileName string) (err error) {
+	viper.SetConfigFile(fileName) // 指定配置文件
 	//viper.SetConfigName("config") // 指定配置文件名称（查找匹配，不需要带后缀）
-	//viper.SetConfigType("yaml")   // 指定配置文件类型(专用于从远程获取配置信息时指定配置文件类型）
+	//viper.SetConfigType("yaml")   // 指定配置文件类型(搭配于从远程获取配置信息时指定配置文件类型，用什么类型取解析）
 	//viper.AddConfigPath(".")   // 指定查找配置文件路径（这里使用相对路径）
 	err = viper.ReadInConfig() // 读取配置信息
 	if err != nil {

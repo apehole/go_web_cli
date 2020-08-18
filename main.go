@@ -7,6 +7,7 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
 	"go.uber.org/zap"
 	"go_web_cli/dao/mysql"
@@ -21,9 +22,17 @@ import (
 	"time"
 )
 
+var confPath string
+
+func getConfigPath() {
+	flag.StringVar(&confPath, "f", "./config.yaml", "give config file path")
+	flag.Parse()
+}
+
 func main() {
+	getConfigPath()
 	// 1. 加载配置
-	if err := settings.Init(); err != nil {
+	if err := settings.Init(confPath); err != nil {
 		fmt.Printf("init settings failed:%v\n", err)
 		return
 	}
