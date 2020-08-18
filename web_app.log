@@ -1,0 +1,2 @@
+{"level":"debug","ts":"2020-08-18 22:34:52","caller":"go_web_cli/main.go:37","msg":"logger init success..."}
+{"level":"error","ts":"2020-08-18 22:34:52","caller":"mysql/mysql.go:28","msg":"connect DB failed","error":"dial tcp 127.0.0.1:3308: connect: connection refused"}
