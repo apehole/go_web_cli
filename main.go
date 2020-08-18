@@ -81,7 +81,7 @@ func main() {
 	if err := srv.Shutdown(ctx); err != nil {
 		zap.L().Fatal("Server Shutdown:", zap.Error(err))
 	}
-	zap.L().Info("Server exiting")
 	time.Sleep(5 * time.Second)
+	zap.L().Info("Server exiting")
 	fmt.Println("Server exiting")
 }
