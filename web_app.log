@@ -10,3 +10,9 @@
 {"level":"debug","ts":"2020-08-18 23:13:38","caller":"go_web_cli/main.go:53","msg":"routers init success..."}
 {"level":"info","ts":"2020-08-18 23:13:44","caller":"go_web_cli/main.go:75","msg":"Shutdown Server..."}
 {"level":"info","ts":"2020-08-18 23:13:44","caller":"go_web_cli/main.go:83","msg":"Server exiting"}
+{"level":"debug","ts":"2020-08-18 23:20:03","caller":"go_web_cli/main.go:36","msg":"logger init success..."}
+{"level":"debug","ts":"2020-08-18 23:20:03","caller":"go_web_cli/main.go:43","msg":"mysql init success..."}
+{"level":"debug","ts":"2020-08-18 23:20:03","caller":"go_web_cli/main.go:50","msg":"redis init success..."}
+{"level":"debug","ts":"2020-08-18 23:20:03","caller":"go_web_cli/main.go:53","msg":"routers init success..."}
+{"level":"info","ts":"2020-08-18 23:20:08","caller":"go_web_cli/main.go:75","msg":"Shutdown Server..."}
+{"level":"info","ts":"2020-08-18 23:20:08","caller":"go_web_cli/main.go:83","msg":"Server exiting"}
